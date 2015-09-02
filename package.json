@@ -1,0 +1,19 @@
+{
+  "name": "gulp_for_beginners",
+  "version": "1.0.0",
+  "description": "Tutorial from https://css-tricks.com/gulp-for-beginners/",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomknapen/GulpForBeginners.git"
+  },
+  "author": "Tom",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tomknapen/GulpForBeginners/issues"
+  },
+  "homepage": "https://github.com/tomknapen/GulpForBeginners#readme"
+}
