@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/tomknapen/GulpForBeginners/issues"
   },
-  "homepage": "https://github.com/tomknapen/GulpForBeginners#readme"
+  "homepage": "https://github.com/tomknapen/GulpForBeginners#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0"
+  }
 }
