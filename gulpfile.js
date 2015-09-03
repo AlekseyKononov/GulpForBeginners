@@ -9,6 +9,7 @@ var gulpIf = require('gulp-if');
 var imagemin = require('gulp-imagemin');
 var cache = require('gulp-cache');
 var del = require('del');
+var runSequence = require('run-sequence');
 
 gulp.task('sass', function() {
 	return gulp.src('app/sass/**/*.scss')
@@ -66,4 +67,10 @@ gulp.task('clean', function(callback){
 
 gulp.task('clean:dist', function(callback){
 	del(['dist/**/*', '!dist/images', '!dist/images/**/*'], callback)
+});
+
+gulp.task('build', function(callback) {
+	runSequence('clean:dist',
+		['sass', 'useref', 'images', 'fonts'],
+		callback)
 });
