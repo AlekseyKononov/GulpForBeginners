@@ -8,7 +8,7 @@ var minifyCss = require('gulp-minify-css');
 var gulpIf = require('gulp-if');
 var imagemin = require('gulp-imagemin');
 var cache = require('gulp-cache');
-var del = require('gulp-del');
+var del = require('del');
 
 gulp.task('sass', function() {
 	return gulp.src('app/sass/**/*.scss')
@@ -59,6 +59,6 @@ gulp.task('fonts', function() {
 		.pipe(gulp.dest('dist/fonts'))
 });
 
-gulp.task('clear', function(){
+gulp.task('clean', function(){
 	del('dist');
 });
