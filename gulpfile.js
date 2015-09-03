@@ -6,6 +6,7 @@ var eol = require('gulp-eol');
 var uglify = require('gulp-uglify');
 var minifyCss = require('gulp-minify-css');
 var gulpIf = require('gulp-if');
+var imagemin = require('gulp-imagemin');
 
 gulp.task('sass', function() {
 	return gulp.src('app/sass/**/*.scss')
@@ -41,4 +42,12 @@ gulp.task('useref', function(){
 		.pipe(useref())
 		.pipe(eol('\n'))
 		.pipe(gulp.dest('dist'));
+});
+
+gulp.task('images', function() {
+	return gulp.src('app/images/**/*.+(png|jpg|gif|svg)')
+		.pipe(imagemin({
+			interlaced:true
+			}))
+		.pipe(gulp.dest('dist/images'))
 });
