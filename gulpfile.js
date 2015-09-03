@@ -4,6 +4,7 @@ var browserSync = require('browser-sync');
 var useref = require('gulp-useref');
 var eol = require('gulp-eol');
 var uglify = require('gulp-uglify');
+var minifyCss = require('gulp-minify-css');
 var gulpIf = require('gulp-if');
 
 gulp.task('sass', function() {
@@ -34,6 +35,7 @@ gulp.task('useref', function(){
 
 	return gulp.src('app/*.html')
 		.pipe(assets)
+		.pipe(gulpIf('*.css', minifyCss()))
 		.pipe(gulpIf('*.js', uglify()))
 		.pipe(assets.restore())
 		.pipe(useref())
