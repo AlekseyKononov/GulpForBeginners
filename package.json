@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/tomknapen/GulpForBeginners#readme",
   "devDependencies": {
+    "browser-sync": "^2.9.1",
     "gulp": "^3.9.0",
     "gulp-sass": "^2.0.4"
   }
