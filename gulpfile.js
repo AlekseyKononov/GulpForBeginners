@@ -3,6 +3,7 @@ var sass = require('gulp-sass');
 var browserSync = require('browser-sync');
 var useref = require('gulp-useref');
 var eol = require('gulp-eol');
+var uglify = require('gulp-uglify');
 
 gulp.task('sass', function() {
 	return gulp.src('app/sass/**/*.scss')
@@ -32,6 +33,7 @@ gulp.task('useref', function(){
 
 	return gulp.src('app/*.html')
 		.pipe(assets)
+		.pipe(uglify())
 		.pipe(assets.restore())
 		.pipe(useref())
 		.pipe(eol('\n'))
