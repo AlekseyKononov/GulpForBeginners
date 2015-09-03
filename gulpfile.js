@@ -66,11 +66,7 @@ gulp.task('clean', function(callback){
 });
 
 gulp.task('clean:dist', function(callback){
-	del(['dist/**/*', '!dist/images', '!dist/images/**/*'],function(err){
-																											console.log('testing');
-		if (err) return callback(err);
-		callback();
-	})
+	del(['dist/**/*', '!dist/images', '!dist/images/**/*'],callback)
 });
 
 gulp.task('build', function(callback) {
