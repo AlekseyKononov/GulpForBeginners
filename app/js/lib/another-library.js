@@ -1,0 +1,1 @@
+firstLib.extension = {};
