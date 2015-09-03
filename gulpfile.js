@@ -59,6 +59,11 @@ gulp.task('fonts', function() {
 		.pipe(gulp.dest('dist/fonts'))
 });
 
-gulp.task('clean', function(){
+gulp.task('clean', function(callback){
 	del('dist');
+	return cache.clearAll(callback); // make sure images are processed again (clear cache), since they were deleted by this task...
+});
+
+gulp.task('clean:dist', function(callback){
+	del(['dist/**/*', '!dist/images', '!dist/images/**/*'], callback)
 });
