@@ -1,0 +1,9 @@
+1.# ... from within our project folder
+$ npm init
+
+2. $ npm install gulp --save-dev
+
+3. $ npm install gulp-sass --save-dev
+
+4. $ npm install browser-sync --save-dev
+
