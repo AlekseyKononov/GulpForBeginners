@@ -1,3 +1,7 @@
+0. sudo npm install gulp -g - one time
+
+--
+
 1.# ... from within our project folder
 $ npm init
 
