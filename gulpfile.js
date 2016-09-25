@@ -10,6 +10,7 @@ var imagemin = require('gulp-imagemin');
 var cache = require('gulp-cache');
 var del = require('del');
 var runSequence = require('run-sequence');
+var jade = require('gulp-jade');
 
 gulp.task('sass', function() {
 	return gulp.src('app/sass/**/*.scss')
@@ -78,4 +79,14 @@ gulp.task('build', function(callback) {
 gulp.task('default', function(callback) {
 	runSequence(['sass', 'browserSync', 'watch'],
 		callback)
+});
+
+gulp.task('jade', function(){
+ gulp.src('./template/*.jade')
+  .pipe(jade())
+  .pipe(gulp.dest('./dist/'))
+});
+
+gulp.task('watch', function(){
+ gulp.watch('./template/*.jade',['jade']);
 });
