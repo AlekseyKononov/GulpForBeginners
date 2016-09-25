@@ -2,12 +2,12 @@
 
 --
 
-1.# ... from within our project folder
+# ... from within our project folder
 $ npm init
 
-2. $ npm install gulp --save-dev
+$ npm install gulp --save-dev
+$ npm install gulp-sass --save-dev
+$ npm install browser-sync --save-dev
+$ npm install --save-dev gulp-jade
 
-3. $ npm install gulp-sass --save-dev
-
-4. $ npm install browser-sync --save-dev
 
